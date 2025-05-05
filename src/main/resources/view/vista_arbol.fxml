@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="TOP_CENTER" spacing="10" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="controller.ArbolController">
+    <padding>
+        <Insets bottom="10" left="10" right="10" top="10" />
+    </padding>
+
+    <TextField fx:id="entrada" promptText="Ingrese valor" />
+
+    <HBox spacing="5">
+        <Button onAction="#insertar" text="Insertar" />
+        <Button onAction="#eliminar" text="Eliminar" />
+        <Button onAction="#buscar" text="Buscar" />
+        <Button onAction="#borrarArbol" text="Borrar Árbol" />
+    </HBox>
+
+    <HBox spacing="5">
+        <Button onAction="#inorden" text="Inorden" />
+        <Button onAction="#preorden" text="Preorden" />
+        <Button onAction="#postorden" text="Postorden" />
+        <Button onAction="#porNiveles" text="Por Niveles" />
+    </HBox>
+
+    <HBox spacing="5">
+        <Button onAction="#peso" text="Peso" />
+        <Button onAction="#altura" text="Altura" />
+        <Button onAction="#nivel" text="Nivel" />
+        <Button onAction="#contarHojas" text="Contar Hojas" />
+        <Button onAction="#menor" text="Menor" />
+        <Button onAction="#mayor" text="Mayor" />
+    </HBox>
+
+    <TextArea fx:id="salida" prefHeight="61.0" prefRowCount="10" prefWidth="512.0" />
+    <Pane fx:id="lienzo" prefHeight="400" />
+</VBox>
