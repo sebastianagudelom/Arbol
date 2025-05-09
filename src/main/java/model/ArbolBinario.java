@@ -90,7 +90,7 @@ public class ArbolBinario {
         return buscarRec(raiz, valor);
     }
 
-    
+
     private boolean buscarRec(Nodo nodo, int valor) {
         if (nodo == null) return false;
         if (valor == nodo.valor) return true;
