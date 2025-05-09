@@ -15,10 +15,8 @@ public class ArbolController {
 
     @FXML
     private Pane lienzo;
-
     @FXML
     private TextField entrada;
-
     @FXML
     private TextArea salida;
 
@@ -132,9 +130,8 @@ public class ArbolController {
         double ancho = lienzo.getWidth();
         double alto = lienzo.getHeight();
 
-        // Ajusta el tamaño del lienzo si es necesario
-        if (ancho == 0) ancho = 800;  // Ajustar tamaño mínimo
-        if (alto == 0) alto = 600;  // Ajustar tamaño mínimo
+        if (ancho == 0) ancho = 800;
+        if (alto == 0) alto = 600;
 
         lienzo.setPrefWidth(ancho);
         lienzo.setPrefHeight(alto);
@@ -155,8 +152,7 @@ public class ArbolController {
 
         lienzo.getChildren().addAll(circulo, texto);
 
-        // Reducir la distancia entre nodos para evitar que las ramas se vean demasiado grandes
-        double nuevoOffset = Math.max(offset / 1.5, 30);  // Esto ajusta el espacio entre los nodos
+        double nuevoOffset = Math.max(offset / 1.5, 30);
 
         if (nodo.izquierdo != null) {
             double xIzq = x - nuevoOffset;

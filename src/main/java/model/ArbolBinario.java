@@ -89,8 +89,7 @@ public class ArbolBinario {
     public boolean buscar(int valor) {
         return buscarRec(raiz, valor);
     }
-
-
+    
     private boolean buscarRec(Nodo nodo, int valor) {
         if (nodo == null) return false;
         if (valor == nodo.valor) return true;
@@ -165,11 +164,9 @@ public class ArbolBinario {
         } else if (valor > nodo.valor) {
             nodo.derecho = eliminarRec(nodo.derecho, valor);
         } else {
-            // caso 1 y 2: 0 o 1 hijo
             if (nodo.izquierdo == null) return nodo.derecho;
             if (nodo.derecho == null) return nodo.izquierdo;
 
-            // caso 3: 2 hijos
             int menorValor = encontrarMin(nodo.derecho);
             nodo.valor = menorValor;
             nodo.derecho = eliminarRec(nodo.derecho, menorValor);
